@@ -1,0 +1,120 @@
+generated: '2026-09-19'
+method: probed
+source: https://www.airqtel.com/
+name: AirQtel — well-known and contract-discovery probe
+description: >-
+  Probe of the /.well-known/ surface and the common machine-readable contract paths on the only
+  domain AirQtel ever published, airqtel.com (its own 2025-02-23 Series A release names
+  www.airqtel.com and an @airqtel.com media contact). NOTHING COULD BE FETCHED and NO WellKnown,
+  SecurityTxt, LLMsTxt, AgentCard, OpenAPI or MCPServer pointer is emitted from this file — it
+  is a record of an absence, not of a presence. Every request below failed at DNS resolution
+  (NXDOMAIN), so `status: 0` means no HTTP exchange took place; it is not a 404. The record has
+  no API baseURL, no OpenAPI servers[] host, no docs host and no MCP host, so the probe surface
+  is the registrable domain and its www alias only.
+host_ownership: unregistered
+host_ownership_note: >-
+  airqtel.com is not registered as of 2026-09-19: dig @1.1.1.1, @8.8.8.8 and @9.9.9.9 all answer
+  NXDOMAIN for the apex and for www (no A, NS or MX records), and Verisign's authoritative .com
+  RDAP (https://rdap.verisign.com/com/v1/domain/airqtel.com) returns HTTP 404 while a control
+  lookup for a registered .com returns 200. The Wayback Machine (CDX) holds captures of a live
+  Squarespace site from 2024-05-09 through 2025-12-27 — Home, About and a Squarespace
+  member-area "Partner Portal" login — and its archived 2025-11-10 sweep of the same
+  /.well-known/ paths recorded 404 for security.txt, openid-configuration, ai-plugin.json,
+  gpc.json, nodeinfo, dnt-policy.txt and trust.txt, and 404 for /api/. So while the host was
+  alive it served none of these documents either. No present-day response can be attributed to
+  AirQtel because there is no present-day host.
+archive_evidence:
+  source: http://web.archive.org/cdx/search/cdx?url=airqtel.com*
+  first_capture: '2024-05-09'
+  last_live_capture: '2025-12-27'
+  archived_well_known:
+  - path: /.well-known/security.txt
+    captured: '2025-11-10'
+    status: 404
+  - path: /.well-known/openid-configuration
+    captured: '2025-12-27'
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    captured: '2025-11-11'
+    status: 404
+  - path: /api/
+    captured: '2025-11-21'
+    status: 404
+  - path: /robots.txt
+    captured: '2025-11-10'
+    status: 200
+    note: Squarespace default robots.txt; no developer paths.
+hosts:
+- host: airqtel.com
+  dns: NXDOMAIN
+  note: >-
+    Not registered (RDAP 404). Probed 2026-09-19 with a browser User-Agent; curl exits 6
+    (could not resolve host) before any request is sent.
+  documents:
+  - path: /.well-known/security.txt
+    status: 0
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 0
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 0
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 0
+    file: null
+  - path: /.well-known/api-catalog
+    status: 0
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 0
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 0
+    file: null
+  - path: /.well-known/agent.json
+    status: 0
+    file: null
+  - path: /llms.txt
+    status: 0
+    file: null
+  - path: /openapi.json
+    status: 0
+    file: null
+  - path: /swagger.json
+    status: 0
+    file: null
+- host: www.airqtel.com
+  dns: NXDOMAIN
+  note: Same as the apex — the www label resolves to nothing because the zone does not exist.
+  documents:
+  - path: /.well-known/security.txt
+    status: 0
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 0
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 0
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 0
+    file: null
+  - path: /.well-known/api-catalog
+    status: 0
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 0
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 0
+    file: null
+  - path: /.well-known/agent.json
+    status: 0
+    file: null
+  - path: /llms.txt
+    status: 0
+    file: null
+  - path: /openapi.json
+    status: 0
+    file: null

@@ -1,16 +1,42 @@
 aid: airqtel
 name: AirQtel
-description: 'AirQtel is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  AirQtel is a Wellesley, Massachusetts aerial surveillance operator founded in 2021 by Vin
+  Loccisano. It sells ultra-high-resolution real-time aerial imaging as a service, flown from
+  its own fleet of manned aircraft and remotely piloted hardware carrying its proprietary
+  "Looking-Glass" imaging systems, to military, government and commercial customers, and
+  announced a $27M Series A in February 2025 following a prototype launch of the Looking Glass
+  aerial network across four countries. Its only published domain, airqtel.com, hosted a
+  three-page Squarespace brochure site (Home, About, Partner Portal login) with no developer
+  program, API, SDK or machine-readable contract of any kind, and as of 2026-09-19 that domain
+  is no longer registered (NXDOMAIN at every public resolver; Verisign RDAP 404).
 url: https://raw.githubusercontent.com/api-evangelist/airqtel/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
 x-tier: stub
-x-tier-reason: harvest
+x-tier-reason: harvest-no-api-surface
+x-domain-status: unregistered
+x-domain-note: >-
+  airqtel.com is the domain AirQtel published in its own 2025-02-23 Series A release
+  (website www.airqtel.com, media contact @airqtel.com). On 2026-09-19 airqtel.com and
+  www.airqtel.com return NXDOMAIN from 1.1.1.1, 8.8.8.8 and 9.9.9.9 (no A, NS or MX), and
+  Verisign's .com RDAP answers 404 for the name while answering 200 for a control domain, so the
+  registration itself has lapsed rather than the site going dark. The Wayback Machine holds a
+  live Squarespace site through 2025-12-27. No shutdown, acquisition or rebrand announcement
+  was found, so the company's operating status is unknown and it is NOT marked defunct; no
+  Website pointer is wired because no host the company controls currently answers, and the
+  Nasdaq Private Market listing the harvest stub carried is a trading venue, not the company.
 specificationVersion: '0.20'
 created: '2026-09-19'
 modified: '2026-09-19'
 tags:
+- Aerial Surveillance
+- Aerospace and Defense
+- Drones
+- Imaging
+- Geospatial
+- Government
+- Hardware
 - Company
 apis: []
 maintainers:
@@ -19,5 +45,33 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
-- type: Website
-  url: https://www.nasdaqprivatemarket.com/
+- type: X-WellKnownProbe
+  url: well-known/airqtel-well-known.yml
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    AirQtel sells aerial surveillance flight hours and imagery from its own aircraft and
+    remotely piloted hardware, and its only published domain, airqtel.com, was a three-page
+    Squarespace brochure (Home, About, Partner Portal login) whose archived /.well-known/* and
+    /api/ paths all returned 404 while it was live; the domain is now unregistered (NXDOMAIN at
+    1.1.1.1, 8.8.8.8 and 9.9.9.9; Verisign RDAP 404), no GitHub org, npm or PyPI package
+    exists, and the only reachable 200 is the Nasdaq Private Market venue listing the harvest
+    stub carried, which is not the company.
+  evidence:
+  - url: https://www.airqtel.com/
+    status: 0
+  - url: https://rdap.verisign.com/com/v1/domain/airqtel.com
+    status: 404
+  - url: https://api.github.com/orgs/airqtel
+    status: 404
+  - url: https://pypi.org/pypi/airqtel/json
+    status: 404
+  - url: https://www.nasdaqprivatemarket.com/
+    status: 200
+  checked: '2026-09-19'
+x-enrichment:
+  date: '2026-09-19'
+  status: minimal
+  artifacts_added: 1
+  pass: local-v3
