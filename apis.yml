@@ -75,3 +75,4 @@ x-enrichment:
   status: minimal
   artifacts_added: 1
   pass: local-v3
+x-status-detail: 'Live company (USD 27M Series A, Feb 2025) but airqtel.com has no DNS records as of 2026-09-22; search indexes still show its old Squarespace pages.'
